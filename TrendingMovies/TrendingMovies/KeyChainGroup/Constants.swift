@@ -8,9 +8,8 @@
 import Foundation
 
 struct KeyChainConstants {
-    static var apiKey = "apiKey"
-    static var accessToken = "accessToken"
-    static var authJSON = "authJSON"
-    static var bundleIdentifier = Bundle.main.bundleIdentifier ?? "com.example.app.TrendingMovies"
+    static let apiKey = "apiKey"
+    static let accessToken = "accessToken"
+    static let authJSON = "authJSON"
+    static let bundleIdentifier = Bundle.main.bundleIdentifier ?? "com.example.app.TrendingMovies"
 }
-
