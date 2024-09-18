@@ -43,16 +43,17 @@ struct MovieInfoView: View {
                                 Text("Overview").font(.subheadline).italic()
                                 Text(viewModel.movieInfo?.overview ?? "No Overview present")
                                 HStack(spacing: 10) {
-                                    Text("Release Date:").font(.subheadline)
+                                    Text("Release Date:").font(.subheadline).italic()
                                     Text(viewModel.movieInfo?.release_date ?? "No Release Date available")
                                 }
-                                HStack {
+                                HStack(alignment: .top) {
                                     Text("Genre:").font(.subheadline).italic()
-                                    ForEach(viewModel.movieInfo?.genres ?? [], id: \.self) { genre in
-                                        HStack(spacing: 5) {
-                                            Text("\(genre.name),")
-                                        }
+//                                    VStack (alignment: .center) {
+                                        ForEach(viewModel.movieInfo?.genres ?? [], id: \.self) { genre in
+                                                Text("\(genre.name)")
+//                                        }
                                     }
+                                    
                                 }
                                 HStack(spacing: 5) {
                                     Text("Run Time:").font(.subheadline).italic()

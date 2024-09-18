@@ -33,6 +33,7 @@ struct MovieListView: View {
                                                 .foregroundColor(.yellow)
                                             Text("\(item.vote_count)")
                                         }
+                                        Spacer()
                                     }
                                 }
                             }
