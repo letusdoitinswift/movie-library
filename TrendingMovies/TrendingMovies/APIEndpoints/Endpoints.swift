@@ -33,7 +33,7 @@ struct Endpoint {
     
     // Movie Details
     static var movieId = 1
-    static var toFetchMovieDetails = baseURL + "movie/\(movieId)"
+    static var toFetchMovieDetails = baseURL + "movie/"
     
     // Add Favorites
     static var toFetchFavorites = baseURL + "account/\(accountId)/favorite"

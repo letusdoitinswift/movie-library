@@ -15,9 +15,9 @@ class MovieInfoViewModel: ObservableObject {
 
     func fetchMovieInfo(movieId: Int) async {
         Endpoint.movieId = movieId
-        let endpoint = Endpoint.toFetchMovieDetails
+        let endpoint = Endpoint.toFetchMovieDetails + "\(movieId)"
         let request =  Endpoint.createRequest(endpoint: endpoint, method: "GET")
-        
+        print(request)
         isLoading = true
         errorMessage = nil
         do {

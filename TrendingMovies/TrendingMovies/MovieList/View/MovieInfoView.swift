@@ -19,7 +19,7 @@ struct MovieInfoView: View {
             VStack {
                 if viewModel.isLoading {
                     ProgressView("Loading...")
-                } else if let errorMessage = viewModel.errorMessage{
+                } else if let errorMessage = viewModel.errorMessage {
                     Text(errorMessage)
                 } else {
                     VStack {
@@ -48,10 +48,8 @@ struct MovieInfoView: View {
                                 }
                                 HStack(alignment: .top) {
                                     Text("Genre:").font(.subheadline).italic()
-//                                    VStack (alignment: .center) {
                                         ForEach(viewModel.movieInfo?.genres ?? [], id: \.self) { genre in
                                                 Text("\(genre.name)")
-//                                        }
                                     }
                                     
                                 }
